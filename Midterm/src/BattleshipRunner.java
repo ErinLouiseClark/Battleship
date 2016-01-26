@@ -9,6 +9,7 @@ public class BattleshipRunner {
 		Board.userBoard();
 		Board.emptyBoard();
 		Setup.generateComputerBoard();
+		//GitHubTester
 	}
 
 }
