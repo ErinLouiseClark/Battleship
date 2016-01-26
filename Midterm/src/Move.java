@@ -62,7 +62,12 @@ public class Move {
 			
 		}
 		
-		Board.userBoard[rowChoice][col] = input;
+		if(Setup.computerBoard == "M"){
+			System.out.println("Miss");
+		}
+		else{
+			System.out.println("Hit");
+		}
 		
 		}
 	}

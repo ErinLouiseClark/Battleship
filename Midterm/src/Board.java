@@ -13,7 +13,17 @@ public class Board {
 	static int col = 0;
 	static String [][] computerDisplay = new String [8][8];
 	static String [][] userBoard = new String [8][8];
-	
+	static String [][] board1 = {
+			{"M", "M","H", "M", "M", "M", "M", "M", "M"},
+			{"M", "M","H", "M", "M", "M", "H", "H", "H"},
+			{"M", "M","M", "M", "M", "M", "M", "M", "M"},
+			{"M", "M","M", "M", "M", "M", "M", "M", "M"},
+			{"H", "M","M", "M", "M", "M", "M", "M", "M"},
+			{"H", "M","M", "H", "H", "H", "H", "M", "M"},
+			{"H", "M","M", "M", "M", "M", "M", "M", "M"},
+			{"H", "M","M", "M", "M", "M", "M", "M", "M"},
+			{"H", "M","M", "M", "M", "M", "M", "M", "M"}
+			};
 	
 	public static void showComputerBoard() {
 	
@@ -178,8 +188,8 @@ public static void emptyBoard(){
 	
 
 
-	public static void runBoard1(){
-	String [][] board1 = {
+	public static String [][] runBoard1(){
+	board1 = {
 	{"M", "M","H", "M", "M", "M", "M", "M", "M"},
 	{"M", "M","H", "M", "M", "M", "H", "H", "H"},
 	{"M", "M","M", "M", "M", "M", "M", "M", "M"},
@@ -191,9 +201,10 @@ public static void emptyBoard(){
 	{"H", "M","M", "M", "M", "M", "M", "M", "M"}
 	};
 	computerDisplay = board1;
+	return board1;
 	}
 	
-	public static void runBoard2(){
+	public static String [][] runBoard2(){
 	String [][] board2 = {
 	{"H", "H", "M", "M", "M", "M", "M", "M", "M"},
 	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
@@ -206,9 +217,10 @@ public static void emptyBoard(){
 	{"M", "M", "M", "M", "H", "H", "H", "H", "H"}
 	};
 	computerDisplay = board2;
+	return board2;
 	}
 	
-	public static void runBoard3(){
+	public static String [][] runBoard3(){
 	String [][] board3 = {
 	{"M", "M", "M", "M", "H", "H", "H", "H", "H"},
 	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
@@ -221,9 +233,10 @@ public static void emptyBoard(){
 	{"M", "M", "M", "M", "M", "M", "M", "M", "M"}
 	};
 	computerDisplay = board3;
+	return board3;
 	}
 	
-	public static void runBoard4(){
+	public static String [][] runBoard4(){
 	String [][] board4 = {
 	{"M", "M", "H", "H", "H", "H", "M", "M", "M"},
 	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
@@ -236,9 +249,10 @@ public static void emptyBoard(){
 	{"M", "H", "M", "M", "M", "M", "M", "M", "M"}
 	};
 	computerDisplay = board4;
+	return board4;
 	}
 	
-	public static void runBoard5(){
+	public static String [][] runBoard5(){
 	String [][] board5 = {
 	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
 	{"H", "H", "H", "H", "H", "M", "M", "M", "M"},
@@ -251,5 +265,6 @@ public static void emptyBoard(){
 	{"M", "M", "M", "M", "M", "H", "H", "H", "M"}
 	};
 	computerDisplay = board5;
+	return board5;
 	}
 }
