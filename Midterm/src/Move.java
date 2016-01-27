@@ -5,6 +5,8 @@ import org.omg.Messaging.SyncScopeHelper;
 public class Move {
 
 	static int rowChoice = 0;
+	static int count = 0;
+	static int counter = 0;
 		
 	public static void attackComputer(){
 		int [][] hitComputer = new int [8][8];
@@ -61,16 +63,18 @@ public class Move {
 		}
 			
 		}
-		
-		if(Setup.computerBoard == "M"){
+		if(Setup.computerBoard[rowChoice][col]== "M"){
 			System.out.println("Miss");
-		}
+			count++;
+			}
 		else{
 			System.out.println("Hit");
+			counter++;
+		}
 		}
 		
 		}
-	}
+	
 	
 	public static void computerMove(){
 		

@@ -14,16 +14,63 @@ public class Board {
 	static String [][] computerDisplay = new String [8][8];
 	static String [][] userBoard = new String [8][8];
 	static String [][] board1 = {
-			{"M", "M","H", "M", "M", "M", "M", "M", "M"},
-			{"M", "M","H", "M", "M", "M", "H", "H", "H"},
-			{"M", "M","M", "M", "M", "M", "M", "M", "M"},
-			{"M", "M","M", "M", "M", "M", "M", "M", "M"},
-			{"H", "M","M", "M", "M", "M", "M", "M", "M"},
-			{"H", "M","M", "H", "H", "H", "H", "M", "M"},
-			{"H", "M","M", "M", "M", "M", "M", "M", "M"},
-			{"H", "M","M", "M", "M", "M", "M", "M", "M"},
-			{"H", "M","M", "M", "M", "M", "M", "M", "M"}
-			};
+		{"M", "M","H", "M", "M", "M", "M", "M", "M"},
+		{"M", "M","H", "M", "M", "M", "H", "H", "H"},
+		{"M", "M","M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M","M", "M", "M", "M", "M", "M", "M"},
+		{"H", "M","M", "M", "M", "M", "M", "M", "M"},
+		{"H", "M","M", "H", "H", "H", "H", "M", "M"},
+		{"H", "M","M", "M", "M", "M", "M", "M", "M"},
+		{"H", "M","M", "M", "M", "M", "M", "M", "M"},
+		{"H", "M","M", "M", "M", "M", "M", "M", "M"}
+		};
+	
+	static String [][] board2 = {
+		{"H", "H", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "H"},
+		{"H", "M", "M", "M", "M", "M", "M", "M", "H"},
+		{"H", "M", "M", "M", "M", "M", "M", "M", "H"},
+		{"H", "M", "M", "M", "M", "M", "M", "M", "H"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "H", "H", "H", "H", "H"}
+		};
+	static String [][] board3 = {
+		{"M", "M", "M", "M", "H", "H", "H", "H", "H"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "H", "H", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "H", "H", "H", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "H", "H", "H", "H", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"}
+		};
+		
+	static String [][] board4 = {
+		{"M", "M", "H", "H", "H", "H", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"H", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"H", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"H", "M", "M", "M", "H", "H", "H", "H", "H"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "H", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "H", "M", "M", "M", "M", "M", "M", "M"}
+		};
+	
+		static String [][] board5 = {
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"H", "H", "H", "H", "H", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "H", "M"},
+		{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "H", "H", "H", "H", "M"},
+		{"M", "H", "M", "M", "H", "M", "M", "M", "M"},
+		{"M", "H", "M", "M", "M", "M", "M", "M", "M"},
+		{"M", "M", "M", "M", "M", "H", "H", "H", "M"}
+		};
 	
 	public static void showComputerBoard() {
 	
@@ -184,87 +231,5 @@ public static void emptyBoard(){
 	System.out.println("	|	 	|		|		|		|		|		|		|		|");
 	System.out.println("	|	 	|		|		|		|		|		|		|		|");
 	System.out.println("	---------------------------------------------------------------------------------------------------------------------------------");
-	}
-	
-
-
-	public static String [][] runBoard1(){
-	board1 = {
-	{"M", "M","H", "M", "M", "M", "M", "M", "M"},
-	{"M", "M","H", "M", "M", "M", "H", "H", "H"},
-	{"M", "M","M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M","M", "M", "M", "M", "M", "M", "M"},
-	{"H", "M","M", "M", "M", "M", "M", "M", "M"},
-	{"H", "M","M", "H", "H", "H", "H", "M", "M"},
-	{"H", "M","M", "M", "M", "M", "M", "M", "M"},
-	{"H", "M","M", "M", "M", "M", "M", "M", "M"},
-	{"H", "M","M", "M", "M", "M", "M", "M", "M"}
-	};
-	computerDisplay = board1;
-	return board1;
-	}
-	
-	public static String [][] runBoard2(){
-	String [][] board2 = {
-	{"H", "H", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "H"},
-	{"H", "M", "M", "M", "M", "M", "M", "M", "H"},
-	{"H", "M", "M", "M", "M", "M", "M", "M", "H"},
-	{"H", "M", "M", "M", "M", "M", "M", "M", "H"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "H", "H", "H", "H", "H"}
-	};
-	computerDisplay = board2;
-	return board2;
-	}
-	
-	public static String [][] runBoard3(){
-	String [][] board3 = {
-	{"M", "M", "M", "M", "H", "H", "H", "H", "H"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "H", "H", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "H", "H", "H", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "H", "H", "H", "H", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"}
-	};
-	computerDisplay = board3;
-	return board3;
-	}
-	
-	public static String [][] runBoard4(){
-	String [][] board4 = {
-	{"M", "M", "H", "H", "H", "H", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"H", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"H", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"H", "M", "M", "M", "H", "H", "H", "H", "H"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "H", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "H", "M", "M", "M", "M", "M", "M", "M"}
-	};
-	computerDisplay = board4;
-	return board4;
-	}
-	
-	public static String [][] runBoard5(){
-	String [][] board5 = {
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"H", "H", "H", "H", "H", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "H", "M"},
-	{"M", "M", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "H", "H", "H", "H", "M"},
-	{"M", "H", "M", "M", "H", "M", "M", "M", "M"},
-	{"M", "H", "M", "M", "M", "M", "M", "M", "M"},
-	{"M", "M", "M", "M", "M", "H", "H", "H", "M"}
-	};
-	computerDisplay = board5;
-	return board5;
 	}
 }
