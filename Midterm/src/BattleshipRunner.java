@@ -10,6 +10,7 @@ public class BattleshipRunner {
 		//Board.emptyBoard();
 		//Setup.generateComputerBoard();
 		Board.runBoard2();
+		//I finally figured this thing out..
 	}
 
 }
