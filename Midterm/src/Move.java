@@ -18,7 +18,7 @@ public class Move {
 		int [][] hitComputer = new int [8][8];
 		System.out.println("You will attack first.");
 		System.out.println("Attack the computer. Enter which coordinate you would like to hit. Ex: A1.");
-		System.out.println("Your move.")
+		System.out.println("Your move.");
 		Scanner userInput = new Scanner(System.in);
 		String input = userInput.nextLine();
 		for(int i = 1; i < input.length(); i++){
@@ -27,10 +27,11 @@ public class Move {
 			}
 		
 		String row = input.substring(0, 1).toLowerCase();
-		int col = Integer.parseInt(input.substring(1, 2));
-		String column = col-1;
+		int col = Integer.parseInt(input.substring(1, 2))-1;
+		String column = input.substring(1,2);
 		
-		switch (row) {
+		switch (row) 
+		{
 		
 		case "a":
 		{
@@ -75,14 +76,17 @@ public class Move {
 		
 		if(Setup.computerBoard[rowChoice][col]== "M"){
 			System.out.println("Miss");
-			return coordinate;
 			}
 		else{
 			System.out.println("Hit");
-		}
-	}	
+			}
+		}	
+	}
+		return coordinate;
 }
-	public static void sinkShip(String userMove){
+
+
+	public static String sinkShip(String userMove){
 	if(Setup.computerBoard == Board.board1){
 		if(userMove == Board.board1[0][2]){
 			countC++;
@@ -388,10 +392,13 @@ public class Move {
 			System.out.println("YOU WIN!");
 			System.exit(0);
 		}	
-		
 		}	
 		
 	}
+}
+}
+}
+	return coordinate;
 }
 }
 

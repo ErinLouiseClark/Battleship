@@ -12,7 +12,7 @@ public class Setup {
         public static void putSpacesOnBoard(){
         	for(int i = 0; i < 8; i++){
         		for(int j = 0; j < 8; j++){
-        			if(Board.userBoard[i][j] = null){
+        			if(Board.userBoard[i][j] == null){
         			Board.userBoard[i][j] = " ";	
         			}
         		}

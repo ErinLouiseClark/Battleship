@@ -14,7 +14,7 @@ public class BattleshipRunner {
 		playGame();
 	}
 	
-	private void playGame(){
+	private static void playGame(){
 		while(true){
 			Move.attackComputer();
 			ComputerMove.computerMove();

@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Ship {
 
-	private String name;
-	private int size;
-	String[][] userList = new String[][];
-
+	private static String name;
+	private static int size;
+	static ArrayList userList = new ArrayList();
+	
 	public Ship(int si, String na){
 		size = si;
 		name = na;
@@ -52,14 +52,13 @@ public class Ship {
 			System.out.println("Enter which " + Ships.get(i).getSize() + " contiguous coordinates you would like to place your " + Ships.get(i).getName() + ". Ex: A1. Press enter after each coordinate.");
 			for(int ii = 0; ii < ship.getSize(); ii++){
 				String input = userInput.nextLine();
+				String row = input.substring(0, 1).toLowerCase();
+				int column = Integer.parseInt(input.substring(1, 2))-1;
 				if(input.length() > 2){
 					System.out.println("Invalid space.");
 					System.exit(0);
 				}
 				else{
-				String row = input.substring(0, 1).toLowerCase();
-				int column = Integer.parseInt(input.substring(1, 2));
-				int col = column-1;
 							
 				switch (row) {
 				
@@ -117,18 +116,16 @@ public class Ship {
 				
 				for(int space = 0; space < 8; space++){
 	        		for(int j = 0; j < 8; j++){
-	        			if(Board.userBoard[space][j] = null){
+	        			if(Board.userBoard[space][j] == null){
 	        			Board.userBoard[space][j] = " ";	
 	        			}
 	        		}
 	        	}
-				Board.userBoard[rowChoice][col] = Ships.get(i).getName(i).substring(0,1).toUpperCase();		
-				userList.add(userList[rowChoice][col]);
+				Board.userBoard[rowChoice][column] = Ships.get(i).getName().substring(0,1).toUpperCase();		
+				userList.add(Board.userBoard[rowChoice][column]);
 				}
-
 			}
 	
-		}
-		
+		}	
 	}
 }
