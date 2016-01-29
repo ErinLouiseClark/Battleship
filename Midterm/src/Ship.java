@@ -4,6 +4,7 @@ public class Ship {
 
 	private String name;
 	private int size;
+	String[][] userList = new String[][];
 
 	public Ship(int si, String na){
 		size = si;
@@ -114,7 +115,8 @@ public class Ship {
 				}
 			
 				}
-				Board.userBoard[rowChoice][col] = Ships.get(i).getName().substring(0,1).toUpperCase();				
+				Board.userBoard[rowChoice][col] = Ships.get(i).getName(i).substring(0,1).toUpperCase();		
+				userList.add(userList[rowChoice][col]);
 				}
 
 			}
