@@ -44,7 +44,6 @@ public class Ship {
 		Ships.add(destroyer);
 		
 		int [][] setShips = new int [8][8];
-		String X = " ";
 		
 		Scanner userInput = new Scanner(System.in);
 		for(int i = 0; i < Ships.size(); i++){
@@ -115,6 +114,14 @@ public class Ship {
 				}
 			
 				}
+				
+				for(int space = 0; space < 8; space++){
+	        		for(int j = 0; j < 8; j++){
+	        			if(Board.userBoard[space][j] = null){
+	        			Board.userBoard[space][j] = " ";	
+	        			}
+	        		}
+	        	}
 				Board.userBoard[rowChoice][col] = Ships.get(i).getName(i).substring(0,1).toUpperCase();		
 				userList.add(userList[rowChoice][col]);
 				}
