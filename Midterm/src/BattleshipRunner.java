@@ -1,24 +1,27 @@
 public class BattleshipRunner {
 
+	static boolean user = true;
+	static boolean computer = true;
+	static boolean game = true;
+	
 	public static void main(String[] args) {
 		System.out.println("Here is your game board.");
-		Board.emptyBoard();
 		Setup.putSpacesOnBoard();
 		Board.userBoard();
 		Ship.fillUserBoard();
 		System.out.println("Here is your game board with your ships.");
 		Board.userBoard();
-		Board.emptyBoard();
 		Setup.generateComputerBoard();
 		//I finally figured this thing out..
+		System.out.println("You will attack first.");
 		playGame();
 	}
 	
 	private static void playGame(){
-		while(true){
+	while(game = true){
 			Move.attackComputer();
 			ComputerMove.computerMove();
 		}
 	}
-
 }
+

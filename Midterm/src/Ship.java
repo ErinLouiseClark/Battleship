@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Ship {
 
-	private static String name;
-	private static int size;
+	private String name;
+	private int size;
 	static ArrayList userList = new ArrayList();
 	
 	public Ship(int si, String na){
@@ -56,7 +56,7 @@ public class Ship {
 				int column = Integer.parseInt(input.substring(1, 2))-1;
 				if(input.length() > 2){
 					System.out.println("Invalid space.");
-					System.exit(0);
+					fillUserBoard();
 				}
 				else{
 							
@@ -109,7 +109,7 @@ public class Ship {
 				default:
 				{
 					System.out.println("Invalid choice.");
-					System.exit(0);
+					fillUserBoard();
 				}
 			
 				}
@@ -124,7 +124,7 @@ public class Ship {
 				Board.userBoard[rowChoice][column] = Ships.get(i).getName().substring(0,1).toUpperCase();		
 				userList.add(Board.userBoard[rowChoice][column]);
 				}
-			}
+ 			}
 	
 		}	
 	}
