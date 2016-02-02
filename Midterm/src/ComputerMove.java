@@ -1,12 +1,11 @@
 import java. util.ArrayList;
 public class ComputerMove {
 
-static ArrayList<String> computerMoves = new ArrayList<String>();
-static String[][] computerBoard = new String[8][8];
-static ArrayList<String> hits = new ArrayList<String>();
-static ArrayList<String> misses = new ArrayList<String>();
+//static ArrayList<String> computerMoves = new ArrayList<String>();
+//static String[][] computerBoard = new String[8][8];
+//static ArrayList<String> hits = new ArrayList<String>();
+//static ArrayList<String> misses = new ArrayList<String>();
 static int counter = 0;
-static boolean move = true;
 static int countC;
 static int countB;
 static int countS;
@@ -14,11 +13,11 @@ static int countD;
 
 public static String computerMove(){
 	
-	int randomRow = (int)(Math.random()*8)-1;
-	int randomCol = (int)(Math.random()*8)-1;
-	String compMove = computerBoard[randomRow][randomCol];
+	int randomRow = (int)(Math.random()*7);
+	int randomCol = (int)(Math.random()*7);
+	String compMove = Board.userBoard[randomRow][randomCol];
 	
-while(move = true){
+
 	if(compMove == " "){
 		compMove = "M";
 		System.out.println("The computer missed your ship.");
@@ -67,7 +66,7 @@ while(move = true){
 		System.out.println("YOU LOSE!");
 		System.exit(0);
 	}
-	}
+	Move.attackComputer();
 return compMove;
 }
 }

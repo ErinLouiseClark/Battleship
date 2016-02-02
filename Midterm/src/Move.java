@@ -10,16 +10,18 @@ public class Move {
 	static int countS = 0;
 	static int countD = 0;
 	static int counter = 0;
-	static String coordinate = attackComputer();
-	static String sink = sinkShip(coordinate);
+	//static String coordinate = attackComputer();
+	//static String sink = sinkShip(coordinate);
+	//static String[][] coordinate = new String[8][8];
 	
 	
-	public static String attackComputer(){
+	public static void attackComputer(){
 		int [][] hitComputer = new int [8][8];
 		System.out.println("Attack the computer. Enter which coordinate you would like to hit. Ex: A1.");
 		System.out.println("Your move.");
 		Scanner userInput = new Scanner(System.in);
 		String input = userInput.nextLine();
+		String H = null;
 		for(int i = 1; i < input.length(); i++){
 			if(input.length() > 2){
 				System.out.println("Invalid space");
@@ -28,10 +30,8 @@ public class Move {
 		
 		String row = input.substring(0, 1).toLowerCase();
 		int col = Integer.parseInt(input.substring(1, 2))-1;
-		String column = input.substring(1,2);
 		
-		switch (row) 
-		{
+		switch (row) {
 		
 		case "a":
 		{
@@ -81,403 +81,366 @@ public class Move {
 			System.out.println("Invalid choice");
 			attackComputer();
 		}
-		
-		if(Setup.computerBoard[rowChoice][col]== "M"){
-			System.out.println("Miss");
-			}
-		else{
-			System.out.println("Hit");
-			}
+		}
+		sinkShip(rowChoice, col);
 		}	
+			
 	}
-		return coordinate;
-}
 
 
-	public static String sinkShip(String userMove){
-	if(Setup.computerBoard == Board.board1){
-		if(userMove == Board.board1[0][2]){
-			System.out.println("Hit");
-			countC++;
+	public static void sinkShip(int row, int column){
+		if(Setup.computerBoard == Board.board1){
+			board1(row, column);
 		}
-		if(userMove == Board.board1[1][2]){
-			System.out.println("Hit");
-			countC++;
+		if(Setup.computerBoard == Board.board2){
+			board2(row, column);
 		}
+		if(Setup.computerBoard == Board.board3){
+			board3(row, column);
+		}
+		if(Setup.computerBoard == Board.board4){
+			board4(row, column);
+		}
+		if(Setup.computerBoard == Board.board5){
+			board5(row, column);
+		}	
+		
 		if(countC == 2){
 			System.out.println("You sunk the computer's Carrier!");
 			counter++;
 		}
-		if(userMove == Board.board1[1][6]){
-			System.out.println("Hit");
-			countB++;
-		}
-		if(userMove == Board.board1[1][7]){
-			System.out.println("Hit");
-			countB++;
-		}
-		if(userMove == Board.board1[1][8]){
-			System.out.println("Hit");
-			countB++;
-		}
-		if(countB == 3){
+		if (countB == 3){
 			System.out.println("You sunk the computer's Battleship!");
 			counter++;
-		}
-		if(userMove == Board.board1[5][3]){
-			System.out.println("Hit");
-			countS++;
-		}
-		if(userMove == Board.board1[5][4]){
-			System.out.println("Hit");
-			countS++;
-		}
-		if(userMove == Board.board1[5][5]){
-			System.out.println("Hit");
-			countS++;
-		}
-		if(userMove == Board.board1[5][6]){
-			System.out.println("Hit");
-			countS++;
 		}
 		if(countS == 4){
 			System.out.println("You sunk the computer's Submarine!");
 			counter++;
 		}
-		if(userMove == Board.board1[0][4]){
-			System.out.println("Hit");
-			countD++;
-		}
-		if(userMove == Board.board1[0][5]){
-			System.out.println("Hit");
-			countD++;
-		}
-		if(userMove == Board.board1[0][6]){
-			System.out.println("Hit");
-			countD++;
-		}
-		if(userMove == Board.board1[0][7]){
-			System.out.println("Hit");
-			countD++;
-		}
-		if(userMove == Board.board1[0][8]){
-			System.out.println("Hit");
-			countD++;
-		}
-		if(countS == 5){
-			System.out.println("You sunk the compter's Destroyer!");
+		if(countD == 5){
+			System.out.println("You sunk the computer's Destroyer!");
 			counter++;
 		}
-
-		if(Setup.computerBoard == Board.board2){
-			if(userMove == Board.board2[0][0]){
-				System.out.println("Hit");
-				countC++;
-			}
-			if(userMove == Board.board2[0][1]){
-				System.out.println("Hit");
-				countC++;
-			}
-			if(countC == 2){
-				System.out.println("You sunk the computer's Carrier!");
-				counter++;
-			}
-			if(userMove == Board.board2[4][0]){
-				System.out.println("Hit");
-				countB++;
-			}
-			if(userMove == Board.board2[5][0]){
-				System.out.println("Hit");
-				countB++;
-			}
-			if(userMove == Board.board2[6][0]){
-				System.out.println("Hit");
-				countB++;
-			}
-			if(countB == 3){
-				System.out.println("You sunk the computer's Battleship!");
-				counter++;
-			}
-			if(userMove == Board.board2[3][8]){
-				System.out.println("Hit");
-				countS++;
-			}
-			if(userMove == Board.board2[4][8]){
-				System.out.println("Hit");
-				countS++;
-			}
-			if(userMove == Board.board2[5][8]){
-				System.out.println("Hit");
-				countS++;
-			}
-			if(userMove == Board.board2[6][8]){
-				System.out.println("Hit");
-				countS++;
-			}
-			if(countS == 4){
-				System.out.println("You sunk the computer's Submarine!");
-				counter++;
-			}
-			if(userMove == Board.board2[8][4]){
-				System.out.println("Hit");
-				countD++;
-			}
-			if(userMove == Board.board2[8][5]){
-				System.out.println("Hit");
-				countD++;
-			}
-			if(userMove == Board.board2[8][6]){
-				System.out.println("Hit");
-				countD++;
-			}
-			if(userMove == Board.board2[8][7]){
-				System.out.println("Hit");
-				countD++;
-			}
-			if(userMove == Board.board2[8][8]){
-				System.out.println("Hit");
-				countD++;
-			}
-			if(countS == 5){
-				System.out.println("You sunk the compter's Destroyer!");
-				counter++;
-			}
-			
-			if(Setup.computerBoard == Board.board3){
-				if(userMove == Board.board3[2][2]){
-					System.out.println("Hit");
-					countC++;
-				}
-				if(userMove == Board.board3[2][3]){
-					System.out.println("Hit");
-					countC++;
-				}
-				if(countC == 2){
-					System.out.println("You sunk the computer's Carrier!");
-					counter++;
-				}
-				if(userMove == Board.board3[4][3]){
-					System.out.println("Hit");
-					countB++;
-				}
-				if(userMove == Board.board3[4][4]){
-					System.out.println("Hit");
-					countB++;
-				}
-				if(userMove == Board.board1[4][5]){
-					System.out.println("Hit");
-					countB++;
-				}
-				if(countB == 3){
-					System.out.println("You sunk the computer's Battleship!");
-					counter++;
-				}
-				if(userMove == Board.board3[4][3]){
-					System.out.println("Hit");
-					countS++;
-				}
-				if(userMove == Board.board3[4][4]){
-					System.out.println("Hit");
-					countS++;
-				}
-				if(userMove == Board.board3[4][5]){
-					System.out.println("Hit");
-					countS++;
-				}
-				if(userMove == Board.board3[4][6]){
-					System.out.println("Hit");
-					countS++;
-				}
-				if(countS == 4){
-					System.out.println("You sunk the computer's Submarine!");
-					counter++;
-				}
-				if(userMove == Board.board3[0][4]){
-					System.out.println("Hit");
-					countD++;
-				}
-				if(userMove == Board.board3[0][5]){
-					System.out.println("Hit");
-					countD++;
-				}
-				if(userMove == Board.board3[0][6]){
-					System.out.println("Hit");
-					countD++;
-				}
-				if(userMove == Board.board3[0][7]){
-					System.out.println("Hit");
-					countD++;
-				}
-				if(userMove == Board.board3[0][8]){
-					System.out.println("Hit");
-					countD++;
-				}
-				if(countS == 5){
-					System.out.println("You sunk the compter's Destroyer!");
-					counter++;
-				}
-				
-				if(Setup.computerBoard == Board.board4){
-					if(userMove == Board.board4[7][1]){
-						System.out.println("Hit");
-						countC++;
-					}
-					if(userMove == Board.board4[8][1]){
-						System.out.println("Hit");
-						countC++;
-					}
-					if(countC == 2){
-						System.out.println("You sunk the computer's Carrier!");
-						counter++;
-					}
-					if(userMove == Board.board4[2][0]){
-						System.out.println("Hit");
-						countB++;
-					}
-					if(userMove == Board.board4[3][0]){
-						System.out.println("Hit");
-						countB++;
-					}
-					if(userMove == Board.board4[4][0]){
-						System.out.println("Hit");
-						countB++;
-					}
-					if(countB == 3){
-						System.out.println("You sunk the computer's Battleship!");
-						counter++;
-					}
-					if(userMove == Board.board4[0][2]){
-						System.out.println("Hit");
-						countS++;
-					}
-					if(userMove == Board.board4[0][3]){
-						System.out.println("Hit");
-						countS++;
-					}
-					if(userMove == Board.board4[0][4]){
-						System.out.println("Hit");
-						countS++;
-					}
-					if(userMove == Board.board4[0][5]){
-						System.out.println("Hit");
-						countS++;
-					}
-					if(countS == 4){
-						System.out.println("You sunk the computer's Submarine!");
-						counter++;
-					}
-					if(userMove == Board.board4[4][4]){
-						System.out.println("Hit");
-						countD++;
-					}
-					if(userMove == Board.board4[4][5]){
-						System.out.println("Hit");
-						countD++;
-					}
-					if(userMove == Board.board4[4][6]){
-						System.out.println("Hit");
-						countD++;
-					}
-					if(userMove == Board.board4[4][7]){
-						System.out.println("Hit");
-						countD++;
-					}
-					if(userMove == Board.board4[4][8]){
-						System.out.println("Hit");
-						countD++;
-					}
-					if(countS == 5){
-						System.out.println("You sunk the compter's Destroyer!");
-						counter++;
-					}
-					if(Setup.computerBoard == Board.board5){
-						if(userMove == Board.board5[6][1]){
-							System.out.println("Hit");
-							countC++;
-						}
-						if(userMove == Board.board5[7][1]){
-							System.out.println("Hit");
-							countC++;
-						}
-						if(countC == 2){
-							System.out.println("You sunk the computer's Carrier!");
-							counter++;
-						}
-						if(userMove == Board.board5[8][5]){
-							System.out.println("Hit");
-							countB++;
-						}
-						if(userMove == Board.board5[8][6]){
-							System.out.println("Hit");
-							countB++;
-						}
-						if(userMove == Board.board5[8][7]){
-							System.out.println("Hit");
-							countB++;
-						}
-						if(countB == 3){
-							System.out.println("You sunk the computer's Battleship!");
-							counter++;
-						}
-						if(userMove == Board.board5[5][4]){
-							System.out.println("Hit");
-							countS++;
-						}
-						if(userMove == Board.board5[5][5]){
-							System.out.println("Hit");
-							countS++;
-						}
-						if(userMove == Board.board5[5][6]){
-							System.out.println("Hit");
-							countS++;
-						}
-						if(userMove == Board.board5[5][7]){
-							System.out.println("Hit");
-							countS++;
-						}
-						if(countS == 4){
-							System.out.println("You sunk the computer's Submarine!");
-							counter++;
-						}
-						if(userMove == Board.board5[1][0]){
-							System.out.println("Hit");
-							countD++;
-						}
-						if(userMove == Board.board5[1][1]){
-							System.out.println("Hit");
-							countD++;
-						}
-						if(userMove == Board.board5[1][2]){
-							System.out.println("Hit");
-							countD++;
-						}
-						if(userMove == Board.board5[1][3]){
-							System.out.println("Hit");
-							countD++;
-						}
-						if(userMove == Board.board5[1][4]){
-							System.out.println("Hit");
-							countD++;
-						}
-						if(countS == 5){
-							System.out.println("You sunk the compter's Destroyer!");
-							counter++;
-						}
-						else{
-							System.out.println("Miss");
-						}
+		
 		if(counter == 4){
 			System.out.println("You sunk all of the computer's ships!");
 			System.out.println("YOU WIN!");
 			System.exit(0);
-		}	
-		}	
+		}
+		ComputerMove.computerMove();
+	}		
+	
+	private static void board1(int row, int column){
 		
+			if (row == 0 && column == 2) {
+				System.out.println("Hit");
+				countC++;
+			}
+			else if (row == 1 && column == 2) {
+				System.out.println("Hit");
+				countC++;
+			}
+			
+			else if (row == 1 && column == 6) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 1 && column == 7) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 1 && column == 8) {
+				System.out.println("Hit");
+				countB++;
+			}	
+			else if (row == 5 && column == 3) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 5 && column == 4) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 5 && column == 5) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 5 && column == 6) {
+				System.out.println("Hit");
+				countS++;
+			}
+			
+			else if (row == 0 && column == 4) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 5) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 6) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 7) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 8) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else{
+				System.out.println("Miss");
+			}
+	}
+	private static void board2(int row, int column){
+			if (row == 0 && column == 0) {
+				System.out.println("Hit");
+				countC++;
+			}
+			else if (row == 0 && column == 1) {
+				System.out.println("Hit");
+				countC++;
+			}
+			else if (row == 4 && column == 0) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 5 && column == 0) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 6 && column == 0) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 3 && column == 8) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 4 && column == 8) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 5 && column == 8) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 6 && column == 8) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 8 && column == 4) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 8 && column == 5) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 8 && column == 6) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 8 && column == 7) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 8 && column == 8) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else{
+				System.out.println("Miss");
+			}
+	}
+	
+	private static void board3(int row, int column){
+			if (row == 2 && column == 2) {
+				System.out.println("Hit");
+				countC++;
+			}
+			else if (row == 2 && column == 3) {
+				System.out.println("Hit");
+				countC++;
+			}
+			else if (row == 4 && column == 3) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 4 && column == 4) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 4 && column == 5) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 6 && column == 1) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 6 && column == 2) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 6 && column == 3) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 6 && column == 4) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 0 && column == 4) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 5) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 6) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 7) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 0 && column == 8) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else{
+				System.out.println("Miss");
+			}
+		}
+	
+	private static void board4(int row, int column){
+			if (row == 7 && column == 1) {
+				System.out.println("Hit");
+				countC++;
+			}
+			else if (row == 8 && column == 1) {
+				System.out.println("Hit");
+				countC++;
+			}
+			else if (row == 2 && column == 0) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 3 && column == 0) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 4 && column == 0) {
+				System.out.println("Hit");
+				countB++;
+			}
+			else if (row == 0 && column == 2) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 0 && column == 3) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 0 && column == 4) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 0 && column == 5) {
+				System.out.println("Hit");
+				countS++;
+			}
+			else if (row == 4 && column == 4) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 4 && column == 5) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 4 && column == 6) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 4 && column == 7) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else if (row == 4 && column == 8) {
+				System.out.println("Hit");
+				countD++;
+			}
+			else{
+				System.out.println("Miss");
+			}
+		}
+	private static void board5(int row, int column){
+		if (row == 6 && column == 1) {
+			System.out.println("Hit");
+			countC++;
+		}
+		else if (row == 7 && column == 1) {
+			System.out.println("Hit");
+			countC++;
+		}
+		else if (row == 8 && column == 5) {
+			System.out.println("Hit");
+			countB++;
+		}
+		else if (row == 8 && column == 6) {
+			System.out.println("Hit");
+			countB++;
+		}
+		else if (row == 8 && column == 7) {
+			System.out.println("Hit");
+			countB++;
+		}
+		else if (row == 5 && column == 4) {
+			System.out.println("Hit");
+			countS++;
+		}
+		else if (row == 5 && column == 5) {
+			System.out.println("Hit");
+			countS++;
+		}
+		else if (row == 5 && column == 6) {
+			System.out.println("Hit");
+			countS++;
+		}
+		else if (row == 5 && column == 7) {
+			System.out.println("Hit");
+			countS++;
+		}
+		else if (row == 1 && column == 0) {
+			System.out.println("Hit");
+			countD++;
+		}
+		else if (row == 1 && column == 1) {
+			System.out.println("Hit");
+			countD++;
+		}
+		else if (row == 1 && column == 2) {
+			System.out.println("Hit");
+			countD++;
+		}
+		else if (row == 1 && column == 3) {
+			System.out.println("Hit");
+			countD++;
+		}
+		else if (row == 1 && column == 4) {
+			System.out.println("Hit");
+			countD++;
+		}
+		else{
+			System.out.println("Miss");
+		}
 	}
 }
-}
-}
-	return coordinate;
-}
-}
+
+
 

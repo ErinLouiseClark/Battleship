@@ -14,11 +14,12 @@ public class BattleshipRunner {
 		Setup.generateComputerBoard();
 		//I finally figured this thing out..
 		System.out.println("You will attack first.");
-		playGame();
+		Move.attackComputer();
+		//playGame();
 	}
 	
 	private static void playGame(){
-	while(game = true){
+	while(game){
 			Move.attackComputer();
 			ComputerMove.computerMove();
 		}
