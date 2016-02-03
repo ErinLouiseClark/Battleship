@@ -107,18 +107,22 @@ public class Move {
 		
 		if(countC == 2){
 			System.out.println("You sunk the computer's Carrier!");
+			countC++;
 			counter++;
 		}
 		if (countB == 3){
 			System.out.println("You sunk the computer's Battleship!");
+			countB++;
 			counter++;
 		}
 		if(countS == 4){
 			System.out.println("You sunk the computer's Submarine!");
+			countS++;
 			counter++;
 		}
 		if(countD == 5){
 			System.out.println("You sunk the computer's Destroyer!");
+			countD++;
 			counter++;
 		}
 		

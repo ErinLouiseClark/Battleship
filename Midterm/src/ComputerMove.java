@@ -13,52 +13,60 @@ static int countD;
 
 public static String computerMove(){
 	
-	int randomRow = (int)(Math.random()*7);
-	int randomCol = (int)(Math.random()*7);
+	try {
+		Thread.sleep(2000L);
+	} catch (Exception e){}	
+
+	
+	int randomRow = (int)(Math.random()*8);
+	int randomCol = (int)(Math.random()*8);
 	String compMove = Board.userBoard[randomRow][randomCol];
 	
 
-	if(compMove == " "){
+	if(compMove.equals(" ")){
 		compMove = "M";
 		System.out.println("The computer missed your ship.");
 	}
-	else if(compMove == "C"){
-		compMove = "H";
+	if(compMove.equals("C")){
 		System.out.println("The computer hit your carrier.");
 		countC++;
 		if(countC == 2){
 			System.out.println("The computer sunk your carrier!");
+			countC++;
 		}
 		counter++;
-	}
-	else if(compMove == "B"){
 		compMove = "H";
+	}
+	if(compMove.equals("B")){
 		System.out.println("The computer hit your battleship.");
 		countB++;
-		if(countB ==3){
+		if(countB == 3){
 			System.out.println("The computer sunk your battleship!");
+			countB++;
 		}
 		counter++;
-	}
-	else if(compMove == "S"){
 		compMove = "H";
+	}
+	if(compMove.equals("S")){
 		System.out.println("The computer hit your submarine.");
 		countS++;
 		if(countS == 4){
 			System.out.println("The computer sunk your submarine!");
+			countS++;
 		}
 		counter++;
 	}
-	else if(compMove == "D"){
-		compMove = "H";
+	if(compMove.equals("D")){
 		System.out.println("The computer hit your destroyer.");
 		countD++;
 		if(countD == 5){
 			System.out.println("The computer sunk your destroyer!");
+			countD++;
 		}
 		counter++;
+		compMove = "H";
 	}
-	else if(compMove == "H"){
+	if(compMove.equals("H")){
 		computerMove();
 	}
 	if(counter == 14){
@@ -66,7 +74,12 @@ public static String computerMove(){
 		System.out.println("YOU LOSE!");
 		System.exit(0);
 	}
+	try {
+		Thread.sleep(2000L);
+	} catch (Exception e){}	
+
 	Move.attackComputer();
+	
 return compMove;
 }
 }
