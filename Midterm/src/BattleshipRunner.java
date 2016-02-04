@@ -1,13 +1,18 @@
+import java.net.URL;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.Mixer;
+import java.io.*;
+import sun.audio.*;
+
 public class BattleshipRunner {
 
-	static boolean user = true;
-	static boolean computer = true;
-	static boolean game = true;
+	private Clip line;
 	
 	public static void main(String[] args) {
+		
 		System.out.println("Here is your game board.");
 		Setup.putSpacesOnBoard();
 		Board.userBoard();
@@ -33,21 +38,22 @@ public class BattleshipRunner {
 		try {
 			Thread.sleep(2000L);
 		} catch (Exception e){}	
+		
+	}
 
-	}
-	
-	public static void playSound(){
-		try{
-			AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(this.getClass().getResource("/resources/ExplosionSound.mp3"));
-			Clip clip = AudioSystem.getClip();
-			clip.open(audioInputStream);
-			clip.start( );
-     }
-    catch(Exception ex)
-    {  }
-	
-	}
+public static void play(){
+	try {
+		java.applet.AudioClip clip =
+		java.applet.Applet.newAudioClip(
+		new java.net.URL("www.youtube.com/watch?v=mJAX16YVQ3U"));
+		clip.play();
+		} catch (java.net.MalformedURLException murle) {
+		System.out.println(murle);
 		}
+			
 	}
 }
+	
+		
+
 
