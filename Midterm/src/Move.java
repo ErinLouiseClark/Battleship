@@ -17,7 +17,6 @@ public class Move {
 	
 	public static void attackComputer(){
 		int [][] hitComputer = new int [8][8];
-		System.out.println("Attack the computer. Enter which coordinate you would like to hit. Ex: A1.");
 		System.out.println("Your move.");
 		Scanner userInput = new Scanner(System.in);
 		String input = userInput.nextLine();
@@ -138,56 +137,69 @@ public class Move {
 		
 			if (row == 0 && column == 2) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			else if (row == 1 && column == 2) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			
 			else if (row == 1 && column == 6) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 1 && column == 7) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 1 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}	
 			else if (row == 5 && column == 3) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 5 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 5 && column == 5) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 5 && column == 6) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			
 			else if (row == 0 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 5) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 6) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 7) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 8) {
@@ -201,58 +213,72 @@ public class Move {
 	private static void board2(int row, int column){
 			if (row == 0 && column == 0) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			else if (row == 0 && column == 1) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			else if (row == 4 && column == 0) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 5 && column == 0) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 6 && column == 0) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 3 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 4 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 5 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 6 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 8 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 8 && column == 5) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 8 && column == 6) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 8 && column == 7) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 8 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else{
@@ -263,58 +289,72 @@ public class Move {
 	private static void board3(int row, int column){
 			if (row == 2 && column == 2) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			else if (row == 2 && column == 3) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			else if (row == 4 && column == 3) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 4 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 4 && column == 5) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 6 && column == 1) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 6 && column == 2) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 6 && column == 3) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 6 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 0 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 5) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 6) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 7) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 0 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else{
@@ -325,58 +365,72 @@ public class Move {
 	private static void board4(int row, int column){
 			if (row == 7 && column == 1) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			else if (row == 8 && column == 1) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countC++;
 			}
 			else if (row == 2 && column == 0) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 3 && column == 0) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 4 && column == 0) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countB++;
 			}
 			else if (row == 0 && column == 2) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 0 && column == 3) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 0 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 0 && column == 5) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countS++;
 			}
 			else if (row == 4 && column == 4) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 4 && column == 5) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 4 && column == 6) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 4 && column == 7) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else if (row == 4 && column == 8) {
 				System.out.println("Hit");
+				BattleshipRunner.playSound();
 				countD++;
 			}
 			else{
@@ -386,58 +440,72 @@ public class Move {
 	private static void board5(int row, int column){
 		if (row == 6 && column == 1) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countC++;
 		}
 		else if (row == 7 && column == 1) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countC++;
 		}
 		else if (row == 8 && column == 5) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countB++;
 		}
 		else if (row == 8 && column == 6) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countB++;
 		}
 		else if (row == 8 && column == 7) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countB++;
 		}
 		else if (row == 5 && column == 4) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countS++;
 		}
 		else if (row == 5 && column == 5) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countS++;
 		}
 		else if (row == 5 && column == 6) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countS++;
 		}
 		else if (row == 5 && column == 7) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countS++;
 		}
 		else if (row == 1 && column == 0) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countD++;
 		}
 		else if (row == 1 && column == 1) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countD++;
 		}
 		else if (row == 1 && column == 2) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countD++;
 		}
 		else if (row == 1 && column == 3) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countD++;
 		}
 		else if (row == 1 && column == 4) {
 			System.out.println("Hit");
+			BattleshipRunner.playSound();
 			countD++;
 		}
 		else{

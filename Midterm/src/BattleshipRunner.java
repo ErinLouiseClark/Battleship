@@ -1,3 +1,6 @@
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 public class BattleshipRunner {
 
 	static boolean user = true;
@@ -21,6 +24,7 @@ public class BattleshipRunner {
 			Thread.sleep(2000L);
 		} catch (Exception e){}	
 		System.out.println("You will attack first.");
+		System.out.println("Attack the computer. Enter which coordinate you would like to hit. Ex: A1.");
 		try {
 			Thread.sleep(2000L);
 		} catch (Exception e){}	
@@ -30,13 +34,19 @@ public class BattleshipRunner {
 			Thread.sleep(2000L);
 		} catch (Exception e){}	
 
-		//playGame();
 	}
 	
-	private static void playGame(){
-	while(game){
-			Move.attackComputer();
-			ComputerMove.computerMove();
+	public static void playSound(){
+		try{
+			AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(this.getClass().getResource("/resources/ExplosionSound.mp3"));
+			Clip clip = AudioSystem.getClip();
+			clip.open(audioInputStream);
+			clip.start( );
+     }
+    catch(Exception ex)
+    {  }
+	
+	}
 		}
 	}
 }

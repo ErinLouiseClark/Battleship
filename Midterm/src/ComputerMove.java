@@ -29,6 +29,7 @@ public static String computerMove(){
 	}
 	if(compMove.equals("C")){
 		System.out.println("The computer hit your carrier.");
+		BattleshipRunner.playSound();
 		countC++;
 		if(countC == 2){
 			System.out.println("The computer sunk your carrier!");
@@ -39,6 +40,7 @@ public static String computerMove(){
 	}
 	if(compMove.equals("B")){
 		System.out.println("The computer hit your battleship.");
+		BattleshipRunner.playSound();
 		countB++;
 		if(countB == 3){
 			System.out.println("The computer sunk your battleship!");
@@ -49,6 +51,7 @@ public static String computerMove(){
 	}
 	if(compMove.equals("S")){
 		System.out.println("The computer hit your submarine.");
+		BattleshipRunner.playSound();
 		countS++;
 		if(countS == 4){
 			System.out.println("The computer sunk your submarine!");
@@ -58,6 +61,7 @@ public static String computerMove(){
 	}
 	if(compMove.equals("D")){
 		System.out.println("The computer hit your destroyer.");
+		BattleshipRunner.playSound();
 		countD++;
 		if(countD == 5){
 			System.out.println("The computer sunk your destroyer!");
