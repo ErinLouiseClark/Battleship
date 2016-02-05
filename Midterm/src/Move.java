@@ -10,9 +10,6 @@ public class Move {
 	static int countS = 0;
 	static int countD = 0;
 	static int counter = 0;
-	//static String coordinate = attackComputer();
-	//static String sink = sinkShip(coordinate);
-	//static String[][] coordinate = new String[8][8];
 	
 	
 	public static void attackComputer(){
