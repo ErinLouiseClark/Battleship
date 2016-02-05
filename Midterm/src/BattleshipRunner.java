@@ -1,7 +1,7 @@
 import java.io.File;
 
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+//import javafx.scene.media.Media;
+//import javafx.scene.media.MediaPlayer;
 
 public class BattleshipRunner {
 
@@ -10,7 +10,7 @@ public class BattleshipRunner {
 	private static String uriString = new File(boom).toURI().toString();
 
 	public static void main(String[] args) {
-		new javafx.embed.swing.JFXPanel();
+		//new javafx.embed.swing.JFXPanel();
 
 		System.out.println("Here is your game board.");
 		Setup.putSpacesOnBoard();
@@ -45,9 +45,12 @@ public class BattleshipRunner {
 
 	}
 
-	public static void play() {
+	public static void play(){
+		
+	}
+	public static void play1() {
 		try {
-			new MediaPlayer(new Media(uriString)).play();
+			//new MediaPlayer(new Media(uriString)).play();
 
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
